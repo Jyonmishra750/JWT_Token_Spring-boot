@@ -19,7 +19,7 @@ You can follow these instructions to get the project up and running on your loca
 
 ### Installing
 
-1. Clone the repository:
+   Clone the repository:
 
    ```sh
-   git clone https://github.com/your-username/your-repository.git
+   git clone https://github.com/Jyonmishra750/JWT_Token_Spring-boot.git
