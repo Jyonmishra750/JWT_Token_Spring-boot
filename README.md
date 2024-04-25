@@ -1,6 +1,7 @@
 # JWT Token Generation in Spring Boot
 
-This project demonstrates generating JWT (JSON Web Token) in a Spring Boot application.
+This project demonstrates generating JWT (JSON Web Token) in a Spring Boot application with Swagger Configuration. <br/>
+The Swagger UI will display the "Authorize" button where you can enter the bearer token for authentication the API.
 
 ## Technologies Used
 
