@@ -1,5 +1,6 @@
 package com.example.customercrud.controller;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.customercrud.dto.CredentialRequestDTO;
@@ -28,6 +29,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
+@SecurityRequirement(name = "Authorization")
 public class CustomerController {
 	
 	@Autowired

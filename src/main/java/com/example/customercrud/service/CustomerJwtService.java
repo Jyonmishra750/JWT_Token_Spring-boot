@@ -50,13 +50,12 @@ public class CustomerJwtService implements UserDetailsService{
     }
 	
 	private SecretKey getKey() {
-        byte bytes[] = Base64.getDecoder().decode(secret);
+        byte[] bytes = Base64.getDecoder().decode(secret);
         return Keys.hmacShaKeyFor(bytes);
     }
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		Customer customer = customerRepository.findByEmail(username).orElseThrow(() -> new RuntimeException("User Not Found"));
-		return customer;
+        return customerRepository.findByEmail(username).orElseThrow(() -> new RuntimeException("User Not Found"));
 	}
 }

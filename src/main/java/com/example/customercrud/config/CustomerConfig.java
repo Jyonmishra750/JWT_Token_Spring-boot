@@ -57,7 +57,9 @@ public class CustomerConfig {
 		http.authorizeHttpRequests(request -> {
 			request.requestMatchers("/signup").permitAll()
 				   .requestMatchers("/login").permitAll()
-				   .requestMatchers("/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**").permitAll().anyRequest()
+				   .requestMatchers("/swagger-ui.html", "/swagger-ui/**", "/v2/api-docs/**",
+						   "/v3/api-docs/**", "/webjars/**")
+					.permitAll().anyRequest()
 				   .authenticated();
 		});
 
